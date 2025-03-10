@@ -149,13 +149,8 @@ for ts in thread_sold:
         thread_sold_split.append(ts)
     else:
         list_split = ts.split("&")
-        if len(list_split) == 2:
-            thread_sold_split.append(list_split[0])
-            thread_sold_split.append(list_split[1])
-        else:
-            thread_sold_split.append(list_split[0])
-            thread_sold_split.append(list_split[1])
-            thread_sold_split.append(list_split[2])
+        for color in list_split:
+            thread_sold_split.append(color)
 
 
 # calculating number of each color sold
